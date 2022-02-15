@@ -1,0 +1,14 @@
+$ServiceName="SQLWriter"
+$service=Get-Service -Name $ServiceName
+if($service.Status -ne "Running")
+{
+Start-Service $ServiceName
+}
+
+
+$x=get.service -name "SQL Writer"
+$x.status
+if($x.status -ne "Running")
+{
+get-service SQLWriter|restart-service
+}
